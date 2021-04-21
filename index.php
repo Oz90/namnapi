@@ -15,13 +15,18 @@ $firstNames =
     ["Åsa", "Mahmud", "Jimmy", "Björn", "Pelle", "Calle", "Nisse", "Jon", "David", "Adam"];
 $lastNames =
     ["Öberg", "Al Hakim", "Svensson", "Björndahl", "Lundqvist", "Ibrahimovic", "Karlsson", "Johnsson", "Svensson", "Baserdem"];
+$gender =
+    ["male", "female"];
+
 
 // Steg 3 – Skapa 10 namn och spara dessa i en ny array
 $names = array();
 for ($i = 0; $i < 10; $i++) {
     $name = array(
         "firstname" => $firstNames[rand(0, 9)],
-        "lastname" => $lastNames[rand(0, 9)]
+        "lastname" => $lastNames[rand(0, 9)],
+        "gender" => $gender[rand(0, 1)],
+        "age" => rand(0, 100)
     );
     array_push($names, $name);
 }

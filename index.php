@@ -26,9 +26,13 @@ for ($i = 0; $i < 10; $i++) {
         "firstname" => $firstNames[rand(0, 9)],
         "lastname" => $lastNames[rand(0, 9)],
         "gender" => $gender[rand(0, 1)],
-        "age" => rand(0, 100)
+        "age" => rand(0, 100),
     );
     array_push($names, $name);
+}
+for ($i = 0; $i < 10; $i++) {
+    $email = substr($names[$i]["firstname"], 0, 2) . substr($names[$i]["lastname"], 0, 3) . "@hotmail.com";
+    $names[$i]["email"] = $email;
 }
 
 // print_r($names);
